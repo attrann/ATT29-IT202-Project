@@ -1,0 +1,8 @@
+ADD  PRODUCT:
+http://localhost:3000/addplantproduct.test.php?PlantCareProductID=1001&PlantCareProductCode=CAC&PlantCareProductName=Cactus&PlantCareDescription=Spiky-Indoor-Plants&PlantCareColor=Green&PlantCareCategoryID=100&PlantCareWholesalePrice=40.99&PlantCareListPrice=32.49
+LIST/READ PRODUCT:
+http://localhost:3000/listplantproducts.test.php
+CHANGE PRODUCT:
+http://localhost:3000/changeplantproduct.test.php?PlantCareProductID=1001&PlantCareProductName=Cacti&PlantCareCategoryID=100&PlantCareListPrice=37.87
+REMOVE PRODUCT:
+http://localhost:3000/removeplantproduct.test.php?PlantCareProductID=1001

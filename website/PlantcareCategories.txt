@@ -1,0 +1,8 @@
+ADD CATEGORY:
+http://localhost:3000/addplantcategory.test.php?PlantCareCategoryID=600&PlantCareCategoryCode=PES&PlantCareCategoryName=PESTCONTROL&PlantCareAisle=11
+LIST CATEGORY:
+http://localhost:3000/listplantcategory.test.php
+CHANGE CATEGORY:
+http://localhost:3000/changeplantcategory.test.php?PlantCareCategoryID=600&PlantCareCategoryCode=PCT&PlantCareCategoryName=PEST_CONTROL
+REMOVE CATEGORY:
+http://localhost:3000/removeplantcategory.test.php?PlantCareCategoryID=600
