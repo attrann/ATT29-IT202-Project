@@ -50,7 +50,7 @@ class Item
             $this->itemColor,
             $this->categoryID,
             $this->wholesalePrice,
-            $this->listPrice   // float data type
+            $this->listPrice  
        );
        $result = $stmt->execute();
        $db->close();

@@ -1,10 +1,10 @@
 <?php
 include("plantcarecategory.php");
-$categoryID = $_GET['PlantCareCategoryID'];
+$categoryID = $_GET['categoryID'];
 $category = Category::findCategory($categoryID);
-$category->categoryID = $_GET['PlantCareCategoryID'];
-$category->categoryCode = $_GET['PlantCareCategoryCode'];
-$category->categoryName = $_GET['PlantCareCategoryName'];
+$category->categoryID = $_GET['categoryID'];
+$category->categoryCode = $_GET['categoryCode'];
+$category->categoryName = $_GET['categoryName'];
 $result = $category->updateCategory();
 if ($result) {
    echo "<h2>Category $categoryID updated</h2>\n";
