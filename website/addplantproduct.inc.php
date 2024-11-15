@@ -1,8 +1,8 @@
 <?php
 // include('item.php');
 if (isset($_SESSION['login'])) {
-    $itemID = $_POST['itemID'];
-if ((trim($itemID) == '') or (!is_numeric($itemID))) {
+    $itemID = filter_input(INPUT_POST, 'itemID', FILTER_VALIDATE_INT);
+if ((trim($itemID) == '') or (!is_int($itemID))) {
    echo "<h2>Sorry, you must enter a valid product ID number</h2>\n";
 } else {
     $itemCode = $_POST['itemCode'];

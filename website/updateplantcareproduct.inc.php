@@ -5,7 +5,7 @@ if (!isset($_POST['itemID']) or (!is_numeric($_POST['itemID']))) {
    <a href="index.php?content=listplantproducts">List items</a>
    <?php
 } else {
-   $itemID = $_POST['itemID'];
+   $itemID = htmlspecialchars($_POST['itemID']);
    $item = Item::findItem($itemID);
    if ($item) {
    ?>
@@ -17,29 +17,29 @@ if (!isset($_POST['itemID']) or (!is_numeric($_POST['itemID']))) {
                    <td><?php echo $item->itemID; ?></td>
                </tr>
                <td>Product Code</td>
-                   <td><input type="text" name="itemCode" value="<?php echo $item->itemCode; ?>"></td>
+                   <td><input type="text" name="itemCode" min = "3" max =  "10" required value="<?php echo $item->itemCode; ?>"></td>
                </tr>
                <tr>
                <td>Name</td>
-                   <td><input type="text" name="itemName" value="<?php echo $item->itemName; ?>"></td>
+                   <td><input type="text" name="itemName" min ="10" max =  "100" requiredvalue="<?php echo $item->itemName; ?>"></td>
                </tr>
                <td>Description</td>
-                   <td><input type="text" name="itemDesc" value="<?php echo $item->itemDesc; ?>"></td>
+                   <td><input type="text" name="itemDesc" min ="100" max =  "255" requiredvalue="<?php echo $item->itemDesc; ?>"></td>
                </tr>
                <td>Product Color</td>
-                   <td><input type="text" name="itemColor" value="<?php echo $item->itemColor; ?>"></td>
+                   <td><input type="text" name="itemColor" min ="10" max =  "100" requiredvalue="<?php echo $item->itemColor; ?>"></td>
                </tr>
                <tr>
                    <td>Category ID</td>
-               <td><input type="text" name="categoryID" value="<?php echo $item->categoryID; ?>"></td>
+               <td><input type="text" name="categoryID" min ="3" max =  "10" required value="<?php echo $item->categoryID; ?>"></td>
                </tr>
                <tr>
                    <td>WholeSale Price</td>
-                 <td><input type="text" name="wholesalePrice" value="<?php echo $item->wholesalePrice; ?>"></td>
+                 <td><input type="text" name="wholesalePrice" min ="3" max =  "1000" step ="0.01" required value="<?php echo $item->wholesalePrice; ?>"></td>
                </tr>
                <tr>
                    <td>List Price</td>
-                 <td><input type="text" name="listPrice" value="<?php echo $item->listPrice; ?>"></td>
+                 <td><input type="text" name="listPrice" min ="3" max =  "1000" step ="0.01" required value="<?php echo $item->listPrice; ?>"></td>
                </tr>
            </table><br><br>
            <input type="submit" name="answer" value="Update Item">
