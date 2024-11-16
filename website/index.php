@@ -7,6 +7,8 @@ include("plantcareproduct.php");
 <html>
 <head>
    <title>Product Helper</title>
+   <link rel="stylesheet" type="text/css" href="ih_styles.css">
+   <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
    <header>

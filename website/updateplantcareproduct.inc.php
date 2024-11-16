@@ -17,29 +17,29 @@ if (!isset($_POST['itemID']) or (!is_numeric($_POST['itemID']))) {
                    <td><?php echo $item->itemID; ?></td>
                </tr>
                <td>Product Code</td>
-                   <td><input type="text" name="itemCode" min = "3" max =  "10" required value="<?php echo $item->itemCode; ?>"></td>
+                   <td><input type="text" name="itemCode" minlength = "3" maxlength =  "10" required value="<?php echo $item->itemCode; ?>"></td>
                </tr>
                <tr>
                <td>Name</td>
-                   <td><input type="text" name="itemName" min ="10" max =  "100" requiredvalue="<?php echo $item->itemName; ?>"></td>
+                   <td><input type="text" name="itemName" minlength ="3" maxlength =  "100" requiredvalue="<?php echo $item->itemName; ?>"></td>
                </tr>
                <td>Description</td>
-                   <td><input type="text" name="itemDesc" min ="100" max =  "255" requiredvalue="<?php echo $item->itemDesc; ?>"></td>
+                   <td><input type="text" name="itemDesc" minlength ="5" maxlength =  "255" requiredvalue="<?php echo $item->itemDesc; ?>"></td>
                </tr>
                <td>Product Color</td>
-                   <td><input type="text" name="itemColor" min ="10" max =  "100" requiredvalue="<?php echo $item->itemColor; ?>"></td>
+                   <td><input type="text" name="itemColor" minlength ="3" maxlength =  "100" requiredvalue="<?php echo $item->itemColor; ?>"></td>
                </tr>
                <tr>
                    <td>Category ID</td>
-               <td><input type="text" name="categoryID" min ="3" max =  "10" required value="<?php echo $item->categoryID; ?>"></td>
+               <td><input type="text" name="categoryID" minlength ="3" maxlength =  "10" required value="<?php echo $item->categoryID; ?>"></td>
                </tr>
                <tr>
                    <td>WholeSale Price</td>
-                 <td><input type="text" name="wholesalePrice" min ="3" max =  "1000" step ="0.01" required value="<?php echo $item->wholesalePrice; ?>"></td>
+                 <td><input type="text" name="wholesalePrice" minlength ="3" maxlength =  "1000" step ="0.01" required value="<?php echo $item->wholesalePrice; ?>"></td>
                </tr>
                <tr>
                    <td>List Price</td>
-                 <td><input type="text" name="listPrice" min ="3" max =  "1000" step ="0.01" required value="<?php echo $item->listPrice; ?>"></td>
+                 <td><input type="text" name="listPrice" minlength ="3" maxlength =  "1000" step ="0.01" required value="<?php echo $item->listPrice; ?>"></td>
                </tr>
            </table><br><br>
            <input type="submit" name="answer" value="Update Item">

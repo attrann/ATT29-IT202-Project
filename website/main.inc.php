@@ -5,12 +5,12 @@ if (!isset($_SESSION['login'])) {
   <form name="login" action="index.php" method="post">
     <label>Email:</label>
     <input type="text" name="emailAddress" size="20">
-    <br>
-    <br>
+   <!-- <br> -->
+   <!-- <br> -->
     <label>Password:</label>
     <input type="password" name="password" size="20">
-    <br>
-    <br>
+       <!-- <br> -->
+   <!-- <br> -->
     <input type="submit" value="Login">
     <input type="hidden" name="content" value="validate">
   </form>

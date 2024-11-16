@@ -4,7 +4,7 @@
    ?>
        <tr>
            <td>
-               <hr />
+             <!-- <hr /> -->
            </td>
        </tr>
    <?php
@@ -12,10 +12,12 @@
        echo "<td><h3>Welcome, {$_SESSION['login']}</h3></td>\n";
    ?>
        <tr>
-           <td><a href="index.php"><strong>Home</strong></a></td>
+       <td><img src="images/home.jpg" alt="Home Icon" width="12" height="12">&nbsp;
+            <a href="index.php"><strong>Home</strong></a></td>
        </tr>
        <tr>
-           <td><strong>Categories</strong></td>
+           <td><img src="images/categories.png" alt="Categories Icon" width="12" height="12">&nbsp;
+            <strong>Categories</strong></td>
        </tr>
        <tr>
            <td>&nbsp;&nbsp;&nbsp;<a href="index.php?content=listplantcategory">
@@ -26,7 +28,8 @@
                    <strong>Add New Category</strong></a></td>
        </tr>
        <tr>
-           <td><strong>Items</strong></td>
+           <td><img src="images/items.png" alt="Items Icon" width="12" height="12">&nbsp;
+            <strong>Items</strong></td>
        </tr>
        <tr>
            <td>&nbsp;&nbsp;&nbsp;<a href="index.php?content=listplantproducts">
@@ -43,6 +46,7 @@
        </tr>
        <tr>
            <td><a href="index.php?content=logout">
+                   <img src="images/logout.jpg" alt="Logout Icon" width="12" height="12"></a>&nbsp;
                    <strong>Logout</strong></a></td>
        </tr>
        <tr>

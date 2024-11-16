@@ -5,13 +5,13 @@ if (isset($_SESSION['login'])) {
 if ((trim($itemID) == '') or (!is_int($itemID))) {
    echo "<h2>Sorry, you must enter a valid product ID number</h2>\n";
 } else {
-    $itemCode = $_POST['itemCode'];
-   $itemName = $_POST['itemName'];
-   $itemDesc = $_POST['itemDesc'];
-   $categoryID = $_POST['categoryID'];
-   $itemColor = $_POST['itemColor'];
-   $wholesalePrice = $_POST['wholesalePrice'];
-   $listPrice = $_POST['listPrice'];
+    $itemCode = htmlspecialchars($_POST['itemCode']);
+   $itemName = htmlspecialchars($_POST['itemName']);
+   $itemDesc = htmlspecialchars($_POST['itemDesc']);
+   $categoryID =htmlspecialchars ($_POST['categoryID']);
+   $itemColor = htmlspecialchars($_POST['itemColor']);
+   $wholesalePrice = htmlspecialchars($_POST['wholesalePrice']);
+   $listPrice = htmlspecialchars($_POST['listPrice']);
    $item = new Item(
     $itemID,
     $itemCode,
