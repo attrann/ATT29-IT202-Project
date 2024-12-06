@@ -131,6 +131,30 @@ class Item
        $db->close();
        return $result;
    }
+   static function getTotalItems()
+{
+   $db = getDB();
+   $query = "SELECT count(PlantCareProductID) FROM PlantCareProducts";
+   $result = $db->query($query);
+   $row = $result->fetch_array();
+   if ($row) {
+       return $row[0];
+   } else {
+       return NULL;
+   }
+}
+static function getTotalListPrice()
+{
+   $db = getDB();
+   $query = "SELECT sum(PlantCareListPrice) FROM PlantCareProducts";
+   $result = $db->query($query);
+   $row = $result->fetch_array();
+   if ($row) {
+       return $row[0];
+   } else {
+       return NULL;
+   }
+}
 
 }
 ?>

@@ -105,6 +105,19 @@ class Category
        $db->close();
        return $result;
    }
+   static function getTotalCategories()
+{
+   $db = getDB();
+   $query = "SELECT count(PlantCareCategoryID) FROM PlantCareCategories";
+   $result = $db->query($query);
+   $row = $result->fetch_array();
+   if ($row) {
+       return $row[0];
+   } else {
+       return NULL;
+   }
+}
+
 
 }
 ?>
