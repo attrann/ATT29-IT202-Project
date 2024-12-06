@@ -1,11 +1,11 @@
 <?php
 if (isset($_SESSION['login'])) {
-   session_unset();
+   unset($_SESSION['login']);
 }
-header("Location: index.php");
-?>
-<?php
-session_unset();
-
-session_destroy();
+if (headers_sent()){
+   echo "Click <a href=\"index.php?content=logout\"><strong>here</strong></a> to logout.";
+}
+else{
+   header("Location: index.php");
+}
 ?>

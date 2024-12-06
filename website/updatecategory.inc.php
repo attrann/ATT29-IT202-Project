@@ -33,7 +33,7 @@ if ($category) {
        <input type="submit" name="answer" value="Update Category">
        <input type="submit" name="answer" value="Cancel">
        <input type="hidden" name="categoryID" value="<?php echo $categoryID; ?>">
-       <input type="hidden" name="content" value="changecategory">
+       <input type="hidden" name="content" value="changeplantcategory">
    </form>
 <?php
 } else {

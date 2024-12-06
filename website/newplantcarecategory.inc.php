@@ -11,7 +11,7 @@
        </tr>
        <tr>
            <td>Category Name:</td>
-           <td><input type="text" name="categoryName" size="50"minlength ="10" maxlength ="1000" required></td>
+           <td><input type="text" name="categoryName" size="50"minlength ="2" maxlength ="1000" required></td>
        </tr>
        <tr>
            <td>Category Aisle:</td>
