@@ -11,7 +11,7 @@
        }
        if (userConfirmed) {
            if (target == 1) items.action = "index.php?content=removeplantproduct";
-           if (target == 2) items.action = "index.php?content=updateplantcareproduct";
+           if (target == 2) items.action = "index.php?content=updateplantproduct";
        } else {
            alert("Action canceled.");
        }

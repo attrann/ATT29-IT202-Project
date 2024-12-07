@@ -5,7 +5,7 @@ if (!isset($_POST['itemID']) or (!is_numeric($_POST['itemID']))) {
    <a href="index.php?content=listplantproducts">List items</a>
    <?php
 } else {
-   $itemID = htmlspecialchars($_POST['itemID']);
+   $itemID = ($_POST['itemID']);
    $item = Item::findItem($itemID);
    if ($item) {
    ?>

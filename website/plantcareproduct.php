@@ -95,8 +95,8 @@ class Item
             $row['PlantCareProductCode'],
             $row['PlantCareProductName'],
             $row['PlantCareDescription'],
-            $row['PlantCareCategoryID'],
             $row['PlantCareColor'],
+            $row['PlantCareCategoryID'],
             $row['PlantCareWholesalePrice'],
             $row['PlantCareListPrice']
            );
@@ -110,14 +110,18 @@ class Item
    function updateItem()
    {
        $db = getDB();
-       $query = "UPDATE PlantCareProducts SET PlantCareProductName= ?, " .
-           "PlantCareCategoryID= ?, PlantCareListPrice= ? WHERE PlantCareProductID = $this->itemID";
+       $query = "UPDATE PlantCareProducts SET PlantCareProductCode = ?, PlantCareProductName= ?, PlantCareDescription = ?, PlantCareColor =?," .
+           "PlantCareCategoryID= ?, PlantCareWholeSalePrice =?, PlantCareListPrice= ? WHERE PlantCareProductID = $this->itemID";
        $stmt = $db->prepare($query);
        $stmt->bind_param(
-           "sid",
-           $this->itemName,
-           $this->categoryID,
-           $this->listPrice
+        "ssssidd",
+        $this->itemCode,
+        $this->itemName,
+        $this->itemDesc,
+        $this->itemColor,
+        $this->categoryID,
+        $this->wholesalePrice,
+        $this->listPrice  
        );
        $result = $stmt->execute();
        $db->close();
